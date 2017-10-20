@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Limax.io Scr1pt
 // @namespace    LimaxIoScr1pt
-// @version      0.1
+// @version      0.1.1
 // @description  Script para Limax.io
 // @author       Truebamateo
 // @match        http://limax.io/*
@@ -44,7 +44,7 @@ if(TerremotoTBM)
 
 
 commandsTBM = function(cmd){
-    cmd = window.prompt("Superhex.io Scr1pt por TBM - Insertar comando: (Para ver la lista de comandos insertar Comandos)");
+    cmd = window.prompt("Superhex.io Scr1pt por Truebamateo - Insertar comando: (Para ver la lista de comandos insertar Comandos)");
     if (cmd == "Comandos" || cmd == "comandos" || cmd == "COMANDOS")
     {
         alert(" Lista de comandos:\nComandos: Muestra la lista de comandos.\nAurora: Activa/desactiva el efecto aurora. (BETA)\nTerremoto: Activa/desactiva el efecto terremoto.\nSkin: Cambia la skin.\nAds: Desactiva/activa los anuncios.");
