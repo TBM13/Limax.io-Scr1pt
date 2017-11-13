@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         Limax.io Scr1pt
 // @namespace    LimaxIoScr1pt
-// @version      0.1.1
+// @version      0.1.2
+// @homepageURL  https://github.com/Truebamateo/Limax.io-Scr1pt
+// @icon         https://limax.io/img/limax.ico
 // @description  Script para Limax.io
 // @author       Truebamateo
 // @match        http://limax.io/*
