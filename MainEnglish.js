@@ -49,7 +49,7 @@ commandsTBM = function(cmd){
     cmd = window.prompt("Superhex.io Scr1pt by Truebamateo - Insert command: (For view the command list type Help)");
     if (cmd == "Help" || cmd == "help" || cmd == "HELP")
     {
-        alert(" Command list:\Help: Open the command list.\nAurora: Toggles on or off the aurora effect. (BETA)\Earthquake: Toggles on or off the Earthquake effect.\nSkin: Changes the skin.\nAds: Toggles on or off the ads.");
+        alert(" Command list:\Help: Open the command list.\nAurora: Toggles On or Off the aurora effect. (BETA)\Earthquake: Toggles On or Off the Earthquake effect.\nSkin: Changes the skin.\nAds: Toggles On or Off the ads.");
     } else if(cmd == "Aurora" || cmd == "aurora" || cmd == "AURORA")
     {
         if(AuroraStatus === false)
