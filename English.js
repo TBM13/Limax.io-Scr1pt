@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Limax.io Scr1pt
 // @namespace    LimaxIoScr1pt
-// @version      0.1.2
+// @version      0.2
 // @homepageURL  https://github.com/Truebamateo/Limax.io-Scr1pt
 // @icon         https://limax.io/img/limax.ico
 // @description  Script for Limax.io
@@ -16,6 +16,7 @@ var AdsTBM = window.localStorage.getItem("AdsTBM");
 var AuroraStatus = false;
 var TerremotoStatus = false;
 var AdsStatus = true;
+var LBOff = window.localStorage.getItem("LBTBM");
 
 RemoveAds = function()
 {
@@ -24,13 +25,17 @@ RemoveAds = function()
 };
     document.getElementById("advert").innerHTML = "<h1 style='color:White;'>Ad blocked by Limax.io Scr1pt</h1>";
     AdsStatus = false;
-    console.log("AdsStatus = "+ AdsStatus);
 };
 
 if(AdsTBM)
 {
   RemoveAds();
 }
+
+if(LBOff)
+ {
+     draw_leaderboard = null;
+ }
 
 if(AuroraTBM)
    {
@@ -46,10 +51,10 @@ if(TerremotoTBM)
 
 
 commandsTBM = function(cmd){
-    cmd = window.prompt("Superhex.io Scr1pt by Truebamateo - Insert command: (For view the command list type Help)");
-    if (cmd == "Help" || cmd == "help" || cmd == "HELP")
+    cmd = window.prompt("Superhex.io Scr1pt by Truebamateo - Insert command: (For view the commands list type Commands)");
+    if (cmd == "Commands" || cmd == "commands" || cmd == "COMMANDS")
     {
-        alert(" Command list:\Help: Open the command list.\nAurora: Toggles On or Off the aurora effect. (BETA)\Earthquake: Toggles On or Off the Earthquake effect.\nSkin: Changes the skin.\nAds: Toggles On or Off the ads.");
+        alert(" Commands list:\nCommands: Open the command list.\nAurora: Toggles On or Off the aurora effect. (BETA)\nEarthquake: Toggles On or Off the Earthquake effect.\nSkin: Changes the skin.\nAds: Toggles On or Off the ads.\nLeaderboard: Toggles On or Off the Leaderboard.");
     } else if(cmd == "Aurora" || cmd == "aurora" || cmd == "AURORA")
     {
         if(AuroraStatus === false)
@@ -61,7 +66,7 @@ commandsTBM = function(cmd){
         } else {
             PLAYER_START_LENGTH = 3;
             window.localStorage.removeItem("AuroraTBM");
-            alert("'Aurora' effect deactivated. It's recommended to reload the page.");
+            alert("'Aurora' effect deactivated. It's recommended reload the page.");
         }
     } else if(cmd == "Earthquake" || cmd == "earthquake" || cmd == "EARTHQUAKE")
     {
@@ -76,7 +81,7 @@ commandsTBM = function(cmd){
             BONUS_SPEED = 0.2;
             TerremotoStatus = false;
             window.localStorage.removeItem("TerremotoTBM");
-            alert("'Earthquake' effect deactivated. It's recommended to reload the page.");
+            alert("'Earthquake' effect deactivated. It's recommended reload the page.");
         }
     } else if(cmd == "Skin" || cmd == "skin" || cmd == "SKIN")
     {
@@ -97,6 +102,18 @@ commandsTBM = function(cmd){
            AdsStatus = true;
            alert("Ads activated. The page needs to be reloaded.");
        }
+            } else if(cmd == "Leaderboard" || cmd == "leaderboard" || cmd == "LEADERBOARD")
+     {
+        if(LBOff)
+        {
+            window.localStorage.removeItem("LBTBM");
+            LBOff = window.localStorage.getItem("LBTBM");
+            alert("Leaderboard activated. It's necessary reload the page.");
+        } else {
+            window.localStorage.setItem("LBTBM", true);
+            LBOff = window.localStorage.getItem("LBTBM");
+            alert("Leaderboard deactivated. It's necessary reload the page.");
+        }
     }
 };
 
