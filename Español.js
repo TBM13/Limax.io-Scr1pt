@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Limax.io Scr1pt
 // @namespace    LimaxIoScr1pt
-// @version      0.1.2
+// @version      0.2
 // @homepageURL  https://github.com/Truebamateo/Limax.io-Scr1pt
 // @icon         https://limax.io/img/limax.ico
 // @description  Script para Limax.io
@@ -16,6 +16,7 @@ var AdsTBM = window.localStorage.getItem("AdsTBM");
 var AuroraStatus = false;
 var TerremotoStatus = false;
 var AdsStatus = true;
+var LBOff = window.localStorage.getItem("LBTBM");
 
 RemoveAds = function()
 {
@@ -24,12 +25,16 @@ RemoveAds = function()
 };
     document.getElementById("advert").innerHTML = "<h1 style='color:White;'>Anuncio bloqueado por Limax.io Scr1pt</h1>";
     AdsStatus = false;
-    console.log("AdsStatus = "+ AdsStatus);
 };
 
 if(AdsTBM)
 {
   RemoveAds();
+}
+
+if(LBOff)
+{
+    draw_leaderboard = null;
 }
 
 if(AuroraTBM)
@@ -49,7 +54,7 @@ commandsTBM = function(cmd){
     cmd = window.prompt("Superhex.io Scr1pt por Truebamateo - Insertar comando: (Para ver la lista de comandos insertar Comandos)");
     if (cmd == "Comandos" || cmd == "comandos" || cmd == "COMANDOS")
     {
-        alert(" Lista de comandos:\nComandos: Muestra la lista de comandos.\nAurora: Activa/desactiva el efecto aurora. (BETA)\nTerremoto: Activa/desactiva el efecto terremoto.\nSkin: Cambia la skin.\nAds: Desactiva/activa los anuncios.");
+        alert(" Lista de comandos:\nComandos: Muestra la lista de comandos.\nAurora: Activa/desactiva el efecto aurora. (BETA)\nTerremoto: Activa/desactiva el efecto terremoto.\nSkin: Cambia la skin.\nAds: Desactiva/activa los anuncios.\nLeaderboard: Activa/desactiva la tabla de clasificación.");
     } else if(cmd == "Aurora" || cmd == "aurora" || cmd == "AURORA")
     {
         if(AuroraStatus === false)
@@ -97,6 +102,18 @@ commandsTBM = function(cmd){
            AdsStatus = true;
            alert("Anuncios activados. Se necesita recargar la página.");
        }
+    } else if(cmd == "Leaderboard" || cmd == "leaderboard" || cmd == "LEADERBOARD")
+    {
+        if(LBOff)
+        {
+            window.localStorage.removeItem("LBTBM");
+            LBOff = window.localStorage.getItem("LBTBM");
+            alert("Leaderboard activada. Es necesario recargar la página.");
+        } else {
+            window.localStorage.setItem("LBTBM", true);
+            LBOff = window.localStorage.getItem("LBTBM");
+            alert("Leaderboard desactivada. Es necesario recargar la página.");
+        }
     }
 };
 
