@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Limax.io Scr1pt
 // @namespace    LimaxIoScr1pt
-// @version      0.2
+// @version      0.3
 // @homepageURL  https://github.com/Truebamateo/Limax.io-Scr1pt
 // @icon         https://limax.io/img/limax.ico
 // @description  Script para Limax.io
@@ -17,6 +17,8 @@ var AuroraStatus = false;
 var TerremotoStatus = false;
 var AdsStatus = true;
 var LBOff = window.localStorage.getItem("LBTBM");
+var SFPS = window.localStorage.getItem("SFPSTBM");
+var ZCheat = window.localStorage.getItem("ZoomTBM");
 
 RemoveAds = function()
 {
@@ -49,12 +51,22 @@ if(TerremotoTBM)
     TerremotoStatus = true;
 }
 
+if(ZCheat)
+{
+    is_android = true;
+}
+
+if(SFPS)
+{
+    addStats();
+}
+
 
 commandsTBM = function(cmd){
     cmd = window.prompt("Superhex.io Scr1pt por Truebamateo - Insertar comando: (Para ver la lista de comandos insertar Comandos)");
     if (cmd == "Comandos" || cmd == "comandos" || cmd == "COMANDOS")
     {
-        alert(" Lista de comandos:\nComandos: Muestra la lista de comandos.\nAurora: Activa/desactiva el efecto aurora. (BETA)\nTerremoto: Activa/desactiva el efecto terremoto.\nSkin: Cambia la skin.\nAds: Desactiva/activa los anuncios.\nLeaderboard: Activa/desactiva la tabla de clasificación.");
+        alert(" Lista de comandos:\nComandos: Muestra la lista de comandos.\nAurora: Activa/desactiva el efecto aurora. (BETA)\nTerremoto: Activa/desactiva el efecto terremoto.\nSkin: Cambia la skin.\nAds: Desactiva/activa los anuncios.\nLeaderboard: Activa/desactiva la tabla de clasificación.\nFPS: Activa/desactiva el indicador de FPS.\nZoom: Activa/desactiva el cheat de Zoom.");
     } else if(cmd == "Aurora" || cmd == "aurora" || cmd == "AURORA")
     {
         if(AuroraStatus === false)
@@ -114,7 +126,35 @@ commandsTBM = function(cmd){
             LBOff = window.localStorage.getItem("LBTBM");
             alert("Leaderboard desactivada. Es necesario recargar la página.");
         }
-    }
+    } else if(cmd == "FPS" || cmd == "fps" || cmd == "Fps")
+      {
+          if(SFPS)
+          {
+              window.localStorage.removeItem("SFPSTBM");
+              SFPS = window.localStorage.getItem("SFPSTBM");
+              alert("Indicador de FPS desactivado. Es necesario recargar la página.");
+          } else {
+          window.localStorage.setItem("SFPSTBM", true);
+          SFPS = window.localStorage.getItem("SFPSTBM");
+          addStats();
+              alert("Indicador de FPS activado.");
+          }
+       } else if(cmd == "Zoom" || cmd == "zoom" || cmd == "ZOOM")
+       {
+          if(ZCheat)
+          {
+              window.localStorage.removeItem("ZoomTBM");
+              ZCheat = window.localStorage.getItem("ZoomTBM");
+              is_android = false;
+              alert("Cheat de Zoom desactivado.");
+          } else {
+              window.localStorage.setItem("ZoomTBM", true);
+              ZCheat = window.localStorage.getItem("ZoomTBM");
+              is_android = true;
+              alert("Cheat de Zoom activado.");
+          }
+       }
+
 };
 
 var btn = document.createElement("IMG");
