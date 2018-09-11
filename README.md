@@ -8,12 +8,16 @@
 
 ## Working on/Doing:
 * New UI.
-* Analyzing limax.io code.
+* UI Animations.
+* Analyze limax.io code.
 
 ## To do list:
 * Add more functions to the script.
+* Add style to checkboxes.
 
 ## Done:
 * Script base.
-* Basic UI.
 * Remove ads feature.
+* UI Transparency.
+* Buttons animation.
+* Add UI Support for Limax.io themes.
