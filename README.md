@@ -10,11 +10,11 @@
 ## 🔧 Working on/Doing:
 * New UI.
 * UI Animations.
+* Add style to checkboxes.
 * Analyze limax.io code.
 
 ## 📝 To do list:
 * Add more functions to the script.
-* Add style to checkboxes.
 
 ## ✅ Done:
 * Script base.
