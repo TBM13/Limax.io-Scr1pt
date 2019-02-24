@@ -6,7 +6,7 @@
 * Option to show FPS.
 * Adaptive UI v1.0
 
-### ✳️ View on [GreasyFork](https://greasyfork.org/es/scripts/36071-superhex-io-scr1pt)
+### ✳️ View on [GreasyFork](https://greasyfork.org/es/scripts/34451-limax-io-scr1pt)
 
 ### ✳️ [Donate](https://www.paypal.me/TBM13)
 
