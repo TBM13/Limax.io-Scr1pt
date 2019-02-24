@@ -1,26 +1,25 @@
-# 🔰 Limax.io Scr1pt v2.0
+# Limax.io Scr1pt v2.0
 
-## Coming soon.
-🎉 See [work in progress](https://github.com/Truebamateo/Limax.io-Scr1pt/blob/master/Work-In-Progress.js)
+🔰 This script has the following features:
+* Zoom hack.
+* Ads blocker (can be activated or deactivated).
+* Option to show FPS.
+* Adaptive UI v1.0
 
-## ❕ Script version 2.0 and higher has MIT License.
+## ✳️  View on [GreasyFork](https://greasyfork.org/es/scripts/36071-superhex-io-scr1pt)
 
-# 🔰 Development
+### [Donate](https://www.paypal.me/TBM13)
+
+# 🔰 Next version development
+Last update: 24/02/2019
 
 ## 🔧 Working on/Doing:
-* New UI.
-* UI Animations.
-* Add style to checkboxes.
-* Analyze limax.io code.
+Nothing.
 
 ## 📝 To do list:
-* Add more functions to the script.
+Nothing.
 
 ## ✅ Done:
-* Script base.
-* Remove ads feature.
-* UI Transparency.
-* Buttons animation.
-* Add UI Support for Limax.io themes.
+Nothing.
 
-### For now, this script will be only available in english. Maybe in the future i will add spanish support.
+### This script will be only available in english.
