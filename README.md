@@ -3,7 +3,7 @@
 ## Coming soon.
 🎉 See [work in progress](https://github.com/Truebamateo/Limax.io-Scr1pt/blob/master/Work-In-Progress.js)
 
-# ❕ License now changed to MIT License.
+## ❕ Script version 2.0 and higher has MIT License.
 
 # 🔰 Development
 
