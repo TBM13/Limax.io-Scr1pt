@@ -1,6 +1,6 @@
 # Limax.io Scr1pt v2.0
 
-🔰 This script has the following features:
+#### 🔰 This script has the following features:
 * Zoom hack.
 * Ads blocker (can be activated or deactivated).
 * Option to show FPS.
