@@ -6,8 +6,7 @@
 // @homepageURL  https://github.com/TBM13/Limax.io-Scr1pt
 // @contributionURL https://www.paypal.me/tbm13
 // @icon         http://limax.io/img/limax.ico
-// @description  Mod for Limax.io
-// @description:es-ES Mod para Limax.io
+// @description  Mod for Limax.io - Zoom hack and more
 // @author       TBM13
 // @match        http://limax.io/*
 // @match        http://www.limax.io/*
@@ -34,7 +33,7 @@ style.innerHTML = '.scr1ptBtnSpace {background-color: #47d169; border: none; col
     .scr1ptContainerIce {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerIce input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkIce {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerIce:hover input ~ .scr1ptCheckmarkIce {background-color: #8da0a8;} .scr1ptContainerIce input:checked ~ .scr1ptCheckmarkIce {background-color: #6bb2e2;} .scr1ptCheckmarkIce:after {content: ""; position: absolute; display: none;} .scr1ptContainerIce input:checked ~ .scr1ptCheckmarkIce:after {display: block;} .scr1ptContainerIce .scr1ptCheckmarkIce:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} \
     .scr1ptContainerDark {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerDark input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkDark {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #666262; transition: 0.3s;} .scr1ptContainerDark:hover input ~ .scr1ptCheckmarkDark {background-color: #969696;} .scr1ptContainerDark input:checked ~ .scr1ptCheckmarkDark {background-color: #ce0000;} .scr1ptCheckmarkDark:after {content: ""; position: absolute; display: none;} .scr1ptContainerDark input:checked ~ .scr1ptCheckmarkDark:after {display: block;} .scr1ptContainerDark .scr1ptCheckmarkDark:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}';
 document.getElementsByTagName("head")[0].appendChild(style);
-var ver = "2.0", adsItem, zoomItem, fpsItem,
+var ver = "2.0", isPlaying, adsItem, zoomItem, fpsItem,
     cTheme = "space", defaultSt1 = "position: relative; top: -7px; left: 5px;", defaultSt1H = defaultSt1 + " visibility: hidden;";
 
 window.onload = function() {
@@ -152,6 +151,8 @@ window.zoomHack = function (a) {
     if (!a) {
         zoomItem = window.is_android.toString();
         window.setItems();
+        if (zoomItem == "true" && !window.game_is_show) alert("Note: To enable/disable zoom hack while in game, press the key '1'.");
+        if (window.game_is_show) check2.checked = window.is_android;
         return;
     }
     check2.checked = true;
@@ -171,6 +172,14 @@ window.showFPS = function (a) {
         window.addStats();
         fpsItem = "true";
         window.setItems();
+    }
+}
+
+document.onkeyup = function (e) {
+    e = e || window.event;
+    var key = e.which || e.keyCode;
+    if (key == 49 || key == 97) {
+        if (window.game_is_show) window.zoomHack(false);
     }
 }
 
@@ -212,7 +221,7 @@ check2Text.setAttribute("style", defaultSt1H);
 check2Text.innerText = "zoom hack";
 var check2 = document.createElement("input");
 check2.setAttribute("type", "checkbox");
-check2.setAttribute("onchange", "zoomHack();");
+check2.setAttribute("onchange", "zoomHack(false);");
 var check2Span = document.createElement("span");
 check2Span.setAttribute("class", "scr1ptCheckmarkSpace");
 document.getElementById("scr1ptPanel").appendChild(check2Text);
