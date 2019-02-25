@@ -15,15 +15,13 @@
 
 // ==/UserScript==
 
-/*
-MIT License
+/*MIT License
 
 Copyright (c) 2018 TBM13 (TBM_13 or TBM 13)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
 var style = document.createElement("style");
 style.type = "text/css";
@@ -156,7 +154,7 @@ window.zoomHack = function (a) {
         return;
     }
     check2.checked = true;
-}
+};
 
 window.showFPS = function (a) {
     if (fpsItem == "true") {
@@ -172,16 +170,20 @@ window.showFPS = function (a) {
         window.addStats();
         fpsItem = "true";
         window.setItems();
+        if (!window.game_is_show) alert("Note: To show/hide FPS info while in game, press the key '2'.");
     }
-}
+    if (window.game_is_show) check3.checked = fpsItem == "true";
+};
 
 document.onkeyup = function (e) {
     e = e || window.event;
     var key = e.which || e.keyCode;
     if (key == 49 || key == 97) {
         if (window.game_is_show) window.zoomHack(false);
+    } else if (key == 50 || key == 98) {
+        if (window.game_is_show) window.showFPS(false);
     }
-}
+};
 
 window.goGH = function() {
     window.open("https://github.com/TBM13/Limax.io-Scr1pt");
