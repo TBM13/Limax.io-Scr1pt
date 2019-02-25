@@ -13,10 +13,10 @@
 ________________________________________________________________________________________________
 
 ## 🔰 Next version development
-Last update: 24/02/2019
+Last update: 25/02/2019
 
 ### 🔧 Working on/Doing:
-Nothing.
+* Trying to add more features to the script.
 
 ### 📝 To do list:
 Nothing.
