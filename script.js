@@ -8,9 +8,8 @@
 // @icon         http://limax.io/img/limax.ico
 // @description  Mod for Limax.io - Zoom hack and more
 // @author       TBM13
-// @match        http://limax.io/*
-// @match        http://www.limax.io/*
-// @match        https://www.limax.io/*
+// @match        *://limax.io/*
+// @match        *://www.limax.io/*
 // @grant        none
 
 // ==/UserScript==
