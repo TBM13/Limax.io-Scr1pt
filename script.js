@@ -64,6 +64,7 @@ window.onload = function() {
         window.setTheme();
     }
 
+    window.zoomValue = 1;
     window.getItems();
     if (adsItem) window.rAds(false);
     if (zoomItem) window.zoomHack(true);
@@ -116,21 +117,34 @@ window.rAds = function(msg) {
 window.zoomHack = function(a) {
     if (!zoomItem || a) {
         Math.max = function(a, b) {
-            if (window.players[window.id] != null && a == 17 / (Math.sqrt(Math.sqrt(window.players[window.id].score)) + 7)) {
-                return 1;
+            return window.players[window.id] != null && a == 17 / (Math.sqrt(Math.sqrt(window.players[window.id].score)) + 7) ? window.zoomValue : mathMaxOriginal(a, b);
+        };
+
+        document.onmousewheel = function(e) {
+            if (!window.game_is_show) return;
+
+            var delta;
+            if (!e) e = window.event;
+            if (e.wheelDelta) delta = e.wheelDelta / 60; else if (e.detail) delta = -e.detail / 2;
+
+            if (delta !== null && delta > 0) {
+               if (window.zoomValue < 4) window.zoomValue += 0.1;
+            } else {
+               if (window.zoomValue > 1) window.zoomValue -= 0.1;
             }
-            return mathMaxOriginal(a, b);
         };
     } else {
         Math.max = mathMaxOriginal;
     }
+
     if (!a) {
         zoomItem = !zoomItem;
         window.setItems();
-        if (zoomItem == "true" && !window.game_is_show) alert("Note: To enable/disable zoom hack while in game, press \"1\"");
+        if (zoomItem == "true" && !window.game_is_show) alert("Note: Use the mouse wheel to increase/decrease zoom while in game.");
         if (window.game_is_show) check2.checked = zoomItem;
         return;
     }
+
     check2.checked = true;
 };
 
@@ -152,13 +166,13 @@ window.showFPS = function(a) {
     if (window.game_is_show) check3.checked = fpsItem;
 };
 
-document.onkeyup = function(e) {
+/*document.onkeyup = function(e) {
     e = e || window.event;
     var key = e.which || e.keyCode;
     if (key == 49 || key == 97) {
         if (window.game_is_show) window.zoomHack(false);
     }
-};
+};*/
 
 window.goGH = function() {
     window.open("https://github.com/TBM13/Limax.io-Scr1pt");
