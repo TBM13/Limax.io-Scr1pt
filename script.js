@@ -17,7 +17,7 @@
 
 /*MIT License
 
-Copyright (c) 2018 TBM13 (TBM_13 or TBM 13)
+Copyright (c) 2019 TBM13
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -27,8 +27,8 @@ var style = document.createElement("style");
 style.type = "text/css";
 style.innerHTML = '.scr1ptBtnSpace {background-color: #47d169; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnSpace:hover {background-color: #47b469;} .scr1ptBtnSpace:active {background-color: #478e69;} .scr1ptBtnCandy {background-color: #cd2a3f; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnCandy:hover {background-color: #b32a3f;} .scr1ptBtnCandy:active {background-color: #9d2a36;} .scr1ptBtnIce {background-color: #00b3f8; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnIce:hover {background-color: #009af8;} .scr1ptBtnIce:active {background-color: #007bf8;} .scr1ptBtnDark {background-color: #a70000; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnDark:hover {background-color: #8d0000;} .scr1ptBtnDark:active {background-color: #5b0000;} .scr1ptText {font-family: Arial;} .scr1ptPanel {background:rgba(255,255,255,0.2); border-style: solid; border-width: 3px; border-color: rgb(255, 255, 255, 0.5); border-radius: 5px;} .scr1ptContainerSpace {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerSpace input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkSpace {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerSpace:hover input ~ .scr1ptCheckmarkSpace {background-color: #93afa1;} .scr1ptContainerSpace input:checked ~ .scr1ptCheckmarkSpace {background-color: #70e5a8;} .scr1ptCheckmarkSpace:after {content: ""; position: absolute; display: none;} .scr1ptContainerSpace input:checked ~ .scr1ptCheckmarkSpace:after {display: block;} .scr1ptContainerSpace .scr1ptCheckmarkSpace:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} .scr1ptContainerCandy {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerCandy input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkCandy {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerCandy:hover input ~ .scr1ptCheckmarkCandy {background-color: #af9394;} .scr1ptContainerCandy input:checked ~ .scr1ptCheckmarkCandy {background-color: #e26f73;} .scr1ptCheckmarkCandy:after {content: ""; position: absolute; display: none;} .scr1ptContainerCandy input:checked ~ .scr1ptCheckmarkCandy:after {display: block;} .scr1ptContainerCandy .scr1ptCheckmarkCandy:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} .scr1ptContainerIce {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerIce input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkIce {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerIce:hover input ~ .scr1ptCheckmarkIce {background-color: #8da0a8;} .scr1ptContainerIce input:checked ~ .scr1ptCheckmarkIce {background-color: #6bb2e2;} .scr1ptCheckmarkIce:after {content: ""; position: absolute; display: none;} .scr1ptContainerIce input:checked ~ .scr1ptCheckmarkIce:after {display: block;} .scr1ptContainerIce .scr1ptCheckmarkIce:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} .scr1ptContainerDark {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerDark input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkDark {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #666262; transition: 0.3s;} .scr1ptContainerDark:hover input ~ .scr1ptCheckmarkDark {background-color: #969696;} .scr1ptContainerDark input:checked ~ .scr1ptCheckmarkDark {background-color: #ce0000;} .scr1ptCheckmarkDark:after {content: ""; position: absolute; display: none;} .scr1ptContainerDark input:checked ~ .scr1ptCheckmarkDark:after {display: block;} .scr1ptContainerDark .scr1ptCheckmarkDark:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}';
 document.getElementsByTagName("head")[0].appendChild(style);
-var ver = "2.0", isPlaying, adsItem, zoomItem, fpsItem,
-    cTheme = "space", defaultSt1 = "position: relative; top: -7px; left: 5px;", defaultSt1H = defaultSt1 + " visibility: hidden;";
+var ver = "2.0", adsItem, zoomItem, fpsItem,
+    cTheme = "Space", defaultSt1 = "position: relative; top: -7px; left: 5px;", defaultSt1H = defaultSt1 + " visibility: hidden;";
 
 window.onload = function() {
     window.is_mobile || window.is_android || window.is_ios ? (document.getElementById("c1").ontouchstart = function() {
@@ -41,27 +41,28 @@ window.onload = function() {
         window.disa_interface || window.set_c4_color(this)
     }) : (document.getElementById("c1").onclick = function() {
         window.disa_interface || window.set_c1_color(this)
-        cTheme = "candy";
+        cTheme = "Candy";
         window.setTheme();
     }, document.getElementById("c2").onclick = function() {
         window.disa_interface || window.set_c2_color(this)
-        cTheme = "space";
+        cTheme = "Space";
         window.setTheme();
     }, document.getElementById("c3").onclick = function() {
         window.disa_interface || window.set_c3_color(this)
-        cTheme = "ice";
+        cTheme = "Ice";
         window.setTheme();
     }, document.getElementById("c4").onclick = function() {
         window.disa_interface || window.set_c4_color(this)
-        cTheme = "dark";
+        cTheme = "Dark";
         window.setTheme();
             });
     if (window.current_theme != "c2") {
-        if (window.current_theme == "c1") cTheme = "candy";
-        if (window.current_theme == "c3") cTheme = "ice";
-        if (window.current_theme == "c4") cTheme = "dark";
+        if (window.current_theme == "c1") cTheme = "Candy";
+        if (window.current_theme == "c3") cTheme = "Ice";
+        if (window.current_theme == "c4") cTheme = "Dark";
         window.setTheme();
     }
+
     window.getItems();
     if (adsItem == "true") window.rAds(false);
     if (zoomItem == "true") window.zoomHack(true);
@@ -85,46 +86,17 @@ window.setItems = function() {
 };
 
 window.setTheme = function() {
-    if(cTheme == "candy") {
-        btnGH.setAttribute("class", "scr1ptBtnCandy");
-        btnGF.setAttribute("class", "scr1ptBtnCandy");
-        check1Text.setAttribute("class", "scr1ptContainerCandy");
-        check1Span.setAttribute("class", "scr1ptCheckmarkCandy");
-        check2Text.setAttribute("class", "scr1ptContainerCandy");
-        check2Span.setAttribute("class", "scr1ptCheckmarkCandy");
-        check3Text.setAttribute("class", "scr1ptContainerCandy");
-        check3Span.setAttribute("class", "scr1ptCheckmarkCandy");
-    } else if(cTheme == "space") {
-        btnGH.setAttribute("class", "scr1ptBtnSpace");
-        btnGF.setAttribute("class", "scr1ptBtnSpace");
-        check1Text.setAttribute("class", "scr1ptContainerSpace");
-        check1Span.setAttribute("class", "scr1ptCheckmarkSpace");
-        check2Text.setAttribute("class", "scr1ptContainerSpace");
-        check2Span.setAttribute("class", "scr1ptCheckmarkSpace");
-        check3Text.setAttribute("class", "scr1ptContainerSpace");
-        check3Span.setAttribute("class", "scr1ptCheckmarkSpace");
-    } else if(cTheme == "ice") {
-        btnGH.setAttribute("class", "scr1ptBtnIce");
-        btnGF.setAttribute("class", "scr1ptBtnIce");
-        check1Text.setAttribute("class", "scr1ptContainerIce");
-        check1Span.setAttribute("class", "scr1ptCheckmarkIce");
-        check2Text.setAttribute("class", "scr1ptContainerIce");
-        check2Span.setAttribute("class", "scr1ptCheckmarkIce");
-        check3Text.setAttribute("class", "scr1ptContainerIce");
-        check3Span.setAttribute("class", "scr1ptCheckmarkIce");
-    } else if(cTheme == "dark") {
-        btnGH.setAttribute("class", "scr1ptBtnDark");
-        btnGF.setAttribute("class", "scr1ptBtnDark");
-        check1Text.setAttribute("class", "scr1ptContainerDark");
-        check1Span.setAttribute("class", "scr1ptCheckmarkDark");
-        check2Text.setAttribute("class", "scr1ptContainerDark");
-        check2Span.setAttribute("class", "scr1ptCheckmarkDark");
-        check3Text.setAttribute("class", "scr1ptContainerDark");
-        check3Span.setAttribute("class", "scr1ptCheckmarkDark");
-    } else alert("Error in script.setTheme(): Invalid cTheme value.");
+    btnGH.setAttribute("class", "scr1ptBtn" + cTheme);
+    btnGF.setAttribute("class", "scr1ptBtn" + cTheme);
+    check1Text.setAttribute("class", "scr1ptContainer" + cTheme);
+    check1Span.setAttribute("class", "scr1ptCheckmark" + cTheme);
+    check2Text.setAttribute("class", "scr1ptContainer" + cTheme);
+    check2Span.setAttribute("class", "scr1ptCheckmark" + cTheme);
+    check3Text.setAttribute("class", "scr1ptContainer" + cTheme);
+    check3Span.setAttribute("class", "scr1ptCheckmark" + cTheme);
 };
 
-window.rAds = function (msg) {
+window.rAds = function(msg) {
     if(adsItem == "true" && msg) { //restore ads
         adsItem = "false";
         window.setItems();
@@ -145,14 +117,14 @@ window.zoomHack = function (a) {
     if (!a) {
         zoomItem = window.is_android.toString();
         window.setItems();
-        if (zoomItem == "true" && !window.game_is_show) alert("Note: To enable/disable zoom hack while in game, press the key '1'.");
+        if (zoomItem == "true" && !window.game_is_show) alert("Note: To enable/disable zoom hack while in game, press \"1\"");
         if (window.game_is_show) check2.checked = window.is_android;
         return;
     }
     check2.checked = true;
 };
 
-window.showFPS = function (a) {
+window.showFPS = function(a) {
     if (fpsItem == "true") {
         if (a) {
             window.addStats();
@@ -166,18 +138,15 @@ window.showFPS = function (a) {
         window.addStats();
         fpsItem = "true";
         window.setItems();
-        if (!window.game_is_show) alert("Note: To show/hide FPS info while in game, press the key '2'.");
     }
     if (window.game_is_show) check3.checked = fpsItem == "true";
 };
 
-document.onkeyup = function (e) {
+document.onkeyup = function(e) {
     e = e || window.event;
     var key = e.which || e.keyCode;
     if (key == 49 || key == 97) {
         if (window.game_is_show) window.zoomHack(false);
-    } else if (key == 50 || key == 98) {
-        if (window.game_is_show) window.showFPS(false);
     }
 };
 
