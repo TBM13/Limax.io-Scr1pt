@@ -140,7 +140,7 @@ window.zoomHack = function(a) {
     if (!a) {
         zoomItem = !zoomItem;
         window.setItems();
-        if (zoomItem == "true" && !window.game_is_show) alert("Note: Use the mouse wheel to increase/decrease zoom while in game.");
+        if (zoomItem && !window.game_is_show) alert("Note: Use the mouse wheel to increase/decrease zoom while in game.");
         if (window.game_is_show) check2.checked = zoomItem;
         return;
     }
