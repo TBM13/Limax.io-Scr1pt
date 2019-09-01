@@ -28,7 +28,8 @@ style.type = "text/css";
 style.innerHTML = '.scr1ptBtnSpace {background-color: #47d169; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnSpace:hover {background-color: #47b469;} .scr1ptBtnSpace:active {background-color: #478e69;} .scr1ptBtnCandy {background-color: #cd2a3f; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnCandy:hover {background-color: #b32a3f;} .scr1ptBtnCandy:active {background-color: #9d2a36;} .scr1ptBtnIce {background-color: #00b3f8; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnIce:hover {background-color: #009af8;} .scr1ptBtnIce:active {background-color: #007bf8;} .scr1ptBtnDark {background-color: #a70000; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; padding: 7px 16px; cursor: pointer; transition: 0.3s;} .scr1ptBtnDark:hover {background-color: #8d0000;} .scr1ptBtnDark:active {background-color: #5b0000;} .scr1ptText {font-family: Arial;} .scr1ptPanel {background:rgba(255,255,255,0.2); border-style: solid; border-width: 3px; border-color: rgb(255, 255, 255, 0.5); border-radius: 5px;} .scr1ptContainerSpace {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerSpace input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkSpace {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerSpace:hover input ~ .scr1ptCheckmarkSpace {background-color: #93afa1;} .scr1ptContainerSpace input:checked ~ .scr1ptCheckmarkSpace {background-color: #70e5a8;} .scr1ptCheckmarkSpace:after {content: ""; position: absolute; display: none;} .scr1ptContainerSpace input:checked ~ .scr1ptCheckmarkSpace:after {display: block;} .scr1ptContainerSpace .scr1ptCheckmarkSpace:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} .scr1ptContainerCandy {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerCandy input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkCandy {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerCandy:hover input ~ .scr1ptCheckmarkCandy {background-color: #af9394;} .scr1ptContainerCandy input:checked ~ .scr1ptCheckmarkCandy {background-color: #e26f73;} .scr1ptCheckmarkCandy:after {content: ""; position: absolute; display: none;} .scr1ptContainerCandy input:checked ~ .scr1ptCheckmarkCandy:after {display: block;} .scr1ptContainerCandy .scr1ptCheckmarkCandy:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} .scr1ptContainerIce {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerIce input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkIce {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #828282; transition: 0.3s;} .scr1ptContainerIce:hover input ~ .scr1ptCheckmarkIce {background-color: #8da0a8;} .scr1ptContainerIce input:checked ~ .scr1ptCheckmarkIce {background-color: #6bb2e2;} .scr1ptCheckmarkIce:after {content: ""; position: absolute; display: none;} .scr1ptContainerIce input:checked ~ .scr1ptCheckmarkIce:after {display: block;} .scr1ptContainerIce .scr1ptCheckmarkIce:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);} .scr1ptContainerDark {display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; font-size: 18px; color: white; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;} .scr1ptContainerDark input {position: absolute; opacity: 0; cursor: pointer;} .scr1ptCheckmarkDark {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #666262; transition: 0.3s;} .scr1ptContainerDark:hover input ~ .scr1ptCheckmarkDark {background-color: #969696;} .scr1ptContainerDark input:checked ~ .scr1ptCheckmarkDark {background-color: #ce0000;} .scr1ptCheckmarkDark:after {content: ""; position: absolute; display: none;} .scr1ptContainerDark input:checked ~ .scr1ptCheckmarkDark:after {display: block;} .scr1ptContainerDark .scr1ptCheckmarkDark:after {left: 9px; top: 5px; width: 5px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}';
 document.getElementsByTagName("head")[0].appendChild(style);
 var ver = "2.0", adsItem, zoomItem, fpsItem,
-    cTheme = "Space", defaultSt1 = "position: relative; top: -7px; left: 5px;", defaultSt1H = defaultSt1 + " visibility: hidden;";
+    cTheme = "Space", defaultSt1 = "position: relative; top: -7px; left: 5px;", defaultSt1H = defaultSt1 + " visibility: hidden;",
+    mathMaxOriginal = Math.max;
 
 window.onload = function() {
     window.is_mobile || window.is_android || window.is_ios ? (document.getElementById("c1").ontouchstart = function() {
@@ -64,9 +65,9 @@ window.onload = function() {
     }
 
     window.getItems();
-    if (adsItem == "true") window.rAds(false);
-    if (zoomItem == "true") window.zoomHack(true);
-    if (fpsItem == "true") window.showFPS(true);
+    if (adsItem) window.rAds(false);
+    if (zoomItem) window.zoomHack(true);
+    if (fpsItem) window.showFPS(true);
     txt1.innerText = "limax.io scr1pt " + ver;
     check1Text.setAttribute("style", defaultSt1);
     check2Text.setAttribute("style", defaultSt1);
@@ -74,9 +75,9 @@ window.onload = function() {
 };
 
 window.getItems = function() {
-    adsItem = localStorage.getItem("AdsTBM");
-    zoomItem = localStorage.getItem("ZoomTBM");
-    fpsItem = localStorage.getItem("FpsTBM");
+    adsItem = localStorage.getItem("AdsTBM") == "true";
+    zoomItem = localStorage.getItem("ZoomTBM") == "true";
+    fpsItem = localStorage.getItem("FpsTBM") == "true";
 };
 
 window.setItems = function() {
@@ -97,49 +98,58 @@ window.setTheme = function() {
 };
 
 window.rAds = function(msg) {
-    if(adsItem == "true" && msg) { //restore ads
-        adsItem = "false";
+    if(adsItem && msg) { //restore ads
+        adsItem = false;
         window.setItems();
         alert("Ads restored. Refresh the website to apply the changes.");
     } else {
         document.getElementById("advert").innerHTML = "";
         document.getElementById("play").onclick = function() {window.start();};
         if(msg) {
-            adsItem = "true";
+            adsItem = true;
             window.setItems();
             alert("Ads removed.");
         } else check1.checked = true;
     }
 };
 
-window.zoomHack = function (a) {
-    window.is_android = !window.is_android;
+window.zoomHack = function(a) {
+    if (!zoomItem || a) {
+        Math.max = function(a, b) {
+            if (window.players[window.id] != null && a == 17 / (Math.sqrt(Math.sqrt(window.players[window.id].score)) + 7)) {
+                return 1;
+            }
+            return mathMaxOriginal(a, b);
+        };
+    } else {
+        Math.max = mathMaxOriginal;
+    }
     if (!a) {
-        zoomItem = window.is_android.toString();
+        zoomItem = !zoomItem;
         window.setItems();
         if (zoomItem == "true" && !window.game_is_show) alert("Note: To enable/disable zoom hack while in game, press \"1\"");
-        if (window.game_is_show) check2.checked = window.is_android;
+        if (window.game_is_show) check2.checked = zoomItem;
         return;
     }
     check2.checked = true;
 };
 
 window.showFPS = function(a) {
-    if (fpsItem == "true") {
+    if (fpsItem) {
         if (a) {
             window.addStats();
             check3.checked = true;
             return;
         }
         document.getElementById("alphaversion").removeChild(window.stats.domElement);
-        fpsItem = "false";
+        fpsItem = false;
         window.setItems();
     } else {
         window.addStats();
-        fpsItem = "true";
+        fpsItem = true;
         window.setItems();
     }
-    if (window.game_is_show) check3.checked = fpsItem == "true";
+    if (window.game_is_show) check3.checked = fpsItem;
 };
 
 document.onkeyup = function(e) {
