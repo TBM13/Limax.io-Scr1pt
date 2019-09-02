@@ -240,10 +240,15 @@ SOFTWARE.
     document.onkeydown = function(e) {
         e = e || window.event;
         var key = e.which || e.keyCode;
-        if ((key == 38 || key == 87) && window.game_is_show && window.socket) window.socket.send("[0,1.5," + window.trap + "]");
-        else if ((key == 37 || key == 65) && window.game_is_show && window.socket) window.socket.send("[0,0," + window.trap + "]");
-        else if ((key == 40 || key == 83) && window.game_is_show && window.socket) window.socket.send("[0,-1.5," + window.trap + "]");
-        else if ((key == 39 || key == 68) && window.game_is_show && window.socket) window.socket.send("[0,3.15," + window.trap + "]");
+        if ((key == 38 || key == 87) && window.game_is_show && window.socket) {
+            window.mouseangle = 1.5;
+        } else if ((key == 37 || key == 65) && window.game_is_show && window.socket) {
+            window.mouseangle = 0;
+        } else if ((key == 40 || key == 83) && window.game_is_show && window.socket) {
+            window.mouseangle = -1.5;
+        } else if ((key == 39 || key == 68) && window.game_is_show && window.socket) {
+            window.mouseangle = 3.15;
+        }
     };
 
     window.goGH = function() {
