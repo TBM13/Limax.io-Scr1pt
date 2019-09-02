@@ -237,13 +237,14 @@ SOFTWARE.
         if (window.game_is_show) check3.checked = fpsItem;
     };
 
-    /*document.onkeyup = function(e) {
-    e = e || window.event;
-    var key = e.which || e.keyCode;
-    if (key == 49 || key == 97) {
-        if (window.game_is_show) window.zoomHack(false);
-    }
-};*/
+    document.onkeydown = function(e) {
+        e = e || window.event;
+        var key = e.which || e.keyCode;
+        if ((key == 38 || key == 87) && window.game_is_show && window.socket) window.socket.send("[0,1.5," + window.trap + "]");
+        else if ((key == 37 || key == 65) && window.game_is_show && window.socket) window.socket.send("[0,0," + window.trap + "]");
+        else if ((key == 40 || key == 83) && window.game_is_show && window.socket) window.socket.send("[0,-1.5," + window.trap + "]");
+        else if ((key == 39 || key == 68) && window.game_is_show && window.socket) window.socket.send("[0,3.15," + window.trap + "]");
+    };
 
     window.goGH = function() {
         window.open("https://github.com/TBM13/Limax.io-Scr1pt");
