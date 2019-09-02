@@ -3,6 +3,7 @@
 ### 🔰 This script has the following features:
 * Zoom hack (with mouse wheel support).
 * Ads blocker.
+* Supports movement with WASD and arrows.
 * Option to show FPS.
 * Themed UI.
 
