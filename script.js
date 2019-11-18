@@ -237,7 +237,9 @@ SOFTWARE.
         if (window.game_is_show) check3.checked = fpsItem;
     };
 
+    var originalKeydown = document.onkeydown;
     document.onkeydown = function(e) {
+        if (originalKeydown) originalKeydown(e);
         e = e || window.event;
         var key = e.which || e.keyCode;
         if ((key == 38 || key == 87) && window.game_is_show && window.socket) {
